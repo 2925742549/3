@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.xiao.safecamfinal'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.xiao.safecamfinal'
+        minSdk 23
+        targetSdk 35
+        versionCode 2
+        versionName '1.1-wide-final'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    def camerax_version = "1.4.1"
+    implementation "androidx.camera:camera-core:$camerax_version"
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+    implementation "androidx.camera:camera-lifecycle:$camerax_version"
+    implementation "androidx.lifecycle:lifecycle-service:2.8.7"
+    implementation "androidx.core:core:1.15.0"
+    implementation "org.nanohttpd:nanohttpd:2.3.1"
+}
